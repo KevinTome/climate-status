@@ -1,5 +1,4 @@
-import { apikey } from "./config";
-
+const apikey = '83f395c65961591fc7b706b1ed341a21';
 const cityInput = document.querySelector('#city-input');
 const searchBtn = document.querySelector('#search');
 
@@ -24,7 +23,6 @@ const getWeatherData = async(city) => {
 const showWeatherData = async(city) => {
     const data = await getWeatherData(city);
 
-    console.log(data)
     cityElement.innerText = data.name;
     tempElement.innerText = parseInt(data.main.temp);
     descElement.innerText = data.weather[0].description;
